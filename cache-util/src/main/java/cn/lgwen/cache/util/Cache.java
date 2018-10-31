@@ -35,10 +35,4 @@ public @interface Cache {
      * @return
      */
     String keyGenerator() default "";
-
-    /**
-     * 库
-     * @return
-     */
-    String database() default "";
 }
