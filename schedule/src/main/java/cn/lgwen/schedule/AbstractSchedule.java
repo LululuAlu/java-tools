@@ -2,20 +2,21 @@ package cn.lgwen.schedule;
 
 
 import lombok.Setter;
-import org.springframework.scheduling.Trigger;
 
 /**
  * create schedule based this class
  */
 public abstract class AbstractSchedule implements Schedule {
 
+    @Setter
     private String name;
 
-    @Setter
-    private Trigger trigger;
 
     @Override
     public String getScheduleName() {
+        if (name == null) {
+            return this.getClass().getName();
+        }
         return name;
     }
 }

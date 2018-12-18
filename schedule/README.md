@@ -34,6 +34,7 @@ private ScheduleManager scheduleManager;
 
 public void start() {
     SayHelloSchedule sayHelloSchedule = new SayHelloSchedule()
+    sayHelloSchedule.setName("sayHelloSchedule");
     scheduleManage.run(sayHelloSchedule);
 }
 ```
